@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var item1 = "Rice", rPrice = 100, rQuantity = 2;
+        var item2 = "Sugar", sPrice = 65, sQuantaty = 5;
+        var item3 = "Wheat", wPrice = 80, wQuantity = 4;
+
+        var costRice = rPrice * rQuantity;
+        var costSugar = sPrice * sQuantaty;
+        var costWheat = wPrice * wQuantity;
+
+        console.log(wQuantity);
+        console.log("Total cost of " + item1 + ": ₹" + costRice);
+        console.log("Total cost of " + item2 + ": ₹" + costSugar);
+        console.log("Total Cost of " + item3 + ": ₹" + costWheat);
+
+        var totalBill = costRice + costSugar + costWheat;
+
+        console.log("Total bill amount is: ₹" + totalBill);
+        
+        wQuantity = 10;
+        costWheat = wPrice * wQuantity;
+        totalBill = costRice + costSugar + costWheat;
+        console.log("Updated quantity of Wheat :" + wQuantity);
+        console.log("Total bill amount (Updated): ₹" + totalBill);
+    </script>
+</body>
+</html>
