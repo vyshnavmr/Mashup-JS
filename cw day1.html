@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Front</title>
+</head>
+<body>
+    <h2 id="ttl"></h2>
+    <script>
+        var tshirt = 400, cap = 150;
+        var tshirtSold = 5, capSold = 3;
+        var total1 = tshirt * tshirtSold + cap * capSold
+        console.log(total1)
+        document.getElementById("ttl").innerHTML = total1;
+        tshirt = 450;
+        var total2 = tshirt * tshirtSold + cap * capSold
+        document.write("Updated total: ")
+        document.write(total2)
+
+
+    </script>
+</body>
+</html>
