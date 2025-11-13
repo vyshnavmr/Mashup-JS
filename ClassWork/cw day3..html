@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+</head>
+<body>
+    <script>
+        var feedback = "   I loved the FOOD and the service!   ";
+        changedFeedback = feedback.trim();
+        changedFeedback = changedFeedback.toLowerCase();
+        changedFeedback = changedFeedback.replace(/food/ig , "ambience");
+
+        indexOfService = changedFeedback.indexOf("service")
+        console.log(`Index of "Service" in the sentence is : ${indexOfService}`)
+        newArray = changedFeedback.split(" ");
+        // console.log(changedFeedback);    
+        console.log(`The created array : [${newArray}]`);    
+    </script>
+</body>
+</html>
