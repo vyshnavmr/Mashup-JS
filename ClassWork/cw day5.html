@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="items()">Check Return</button>
+<h4 id="return"></h4>
+<script>
+    var order = {
+        itemName : "Iphone",
+        isDelivered : true,
+        daysSinceDelivered : 10,
+    } 
+    function items(){
+        returnCondition = (order.isDelivered === true) && (order.daysSinceDelivered <= 7);
+        returnStatus = (returnCondition == true)? "Eligible for Return" : "Return Period Expired"
+        document.getElementById("return").innerHTML = returnStatus
+    }
+    console.log("itemName" in order);
+    console.log(("itemName" in order)? delete order.itemName : "Item name non extitant")
+    console.log("Updated order information:", order)
+   
+</script>
+</body>
+</html>
