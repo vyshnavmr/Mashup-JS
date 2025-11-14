@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+</head>
+<body>
+    <button onclick="document.write(isEligible)">Admin Access Enquiry</button>
+    <script>
+        var user = {
+            userName : "Rahul",
+            userAge : 29,
+            isAdmin : true,
+        } 
+
+        var isEligible = (user.userAge >= 18) && (user.isAdmin === true) ? "Access Granted" : "Access Denied";
+        console.log(("userAge" in user)? "User age is present" : "User age is not present");
+
+        // Deleting userAge fro user object
+        delete user.userAge;
+        console.log("Updated user log(deleted 'userAge'): ", user);
+
+
+    </script>
+</body>
+</html>
