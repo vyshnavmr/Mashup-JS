@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        var students = [
+            { name: "Arjun", score: 75 },
+            { name: "Meera", score: 32 },
+            { name: "Rahul", score: 90 },
+            { name: "Sneha", score: 45 },
+            { name: "Kiran", score: 95 }
+        ];
+
+        
+        var allNames = students.map(function(student) {
+            return student.name;
+        });
+        document.write("All Student Names: ", allNames);
+
+        
+        var above60 = students
+            .filter(function(student) {
+                return student.score > 60;
+            })
+            .map(function(student) {
+                return student.name;
+            });
+        console.log("Students scoring above 60:", above60);
+
+        
+        var totalMarks = students.reduce(function(total, student) {
+            return total + student.score;
+        }, 0);
+        console.log("Total Score of All Students:", totalMarks);
+
+        
+        var allPassed = students.every(function(student) {
+            return student.score > 35;
+        });
+        console.log("Did all students pass: ", allPassed);
+
+        
+        var Above90 = students.some(function(student) {
+            return student.score > 90;
+        });
+        console.log("Did anyone score above 90?", Above90);
+
+        
+        var sortedStudents = students.slice().sort(function(a, b) {
+            return b.score - a.score;
+        });
+
+        console.log("Students Sorted by Score (High to Low):");
+        sortedStudents.forEach(function(student) {
+            document.write("<br><br> ", student.name + " - " + student.score);
+        });
+
+    </script>
+</body>
+</html>
