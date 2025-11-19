@@ -1,49 +1,68 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Birthday Tracker</title>
+    <title>Event Reminder Tool</title>
 </head>
 <body>
 
-<p id="result"></p>
+<h2>Event Reminder Tool</h2>
+
+<input type="date" id="eventDate">
+<button onclick="showDetails()">Check</button>
+
+<p id="details"></p>
+<p id="yearsPassed"></p>
+<p id="message"></p>
 
 <script>
-    var friend = {
-        name: "John",
-        birthDate: "2004-04-29"
-    };
+    function showDetails() {
+        var dateInput = document.getElementById("eventDate").value;
 
-    function getBirthdayDetails(friend) {
-        var dateObj = new Date(friend.birthDate);
+        // Convert input string to Date object
+        var eventDate = new Date(dateInput);
 
-        var year = dateObj.getFullYear();
+        // Extract year, month name, day
+        var year = eventDate.getFullYear();
 
         var monthNames = [
-            "January","February","March","April","May","June",
-            "July","August","September","October","November","December"
+            "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
         ];
-        var monthName = monthNames[dateObj.getMonth()];
+        var monthName = monthNames[eventDate.getMonth()];
 
-        var day = dateObj.getDate();
+        var day = eventDate.getDate();
 
+        // Calculate how many full years have passed
         var today = new Date();
-        var age = today.getFullYear() - year;
+        var yearsPassed = today.getFullYear() - year;
 
-        var hasBirthdayPassed =
-            (today.getMonth() > dateObj.getMonth()) ||
-            (today.getMonth() === dateObj.getMonth() && today.getDate() >= day);
-
-        if (!hasBirthdayPassed) {
-            age = age - 1;
+        // Adjust if the month/day hasn't occurred yet this year
+        if (
+            today.getMonth() < eventDate.getMonth() ||
+            (today.getMonth() === eventDate.getMonth() && today.getDate() < day)
+        ) {
+            yearsPassed--;
         }
 
-        var text = friend.name + " was born on " + day + " " + monthName + ", " + year +
-                   " and is " + age + " years old.";
+        // Show details
+        document.getElementById("details").innerHTML =
+            "Selected Date: " + day + " " + monthName + ", " + year;
 
-        document.getElementById("result").innerHTML = text;
+        document.getElementById("yearsPassed").innerHTML =
+            "Full Years Passed: " + yearsPassed;
+
+        // Custom message
+        var oneYearLater = new Date(eventDate);
+        oneYearLater.setFullYear(eventDate.getFullYear() + 1);
+
+        if (today > oneYearLater) {
+            document.getElementById("message").innerHTML =
+                "It has been more than a year since that date.";
+        } else {
+            document.getElementById("message").innerHTML =
+                "It has been less than a year since that date.";
+        }
     }
-
-    getBirthdayDetails(friend);
 </script>
 
 </body>
