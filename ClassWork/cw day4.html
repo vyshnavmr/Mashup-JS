@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="a"></p>
+    <p id="b"></p>
+    <p id="c"></p>
+    <p id="d"></p>
+    <p id="e"></p>
+    <p id="f"></p>
+    <script>
+        var score = "67";
+        var b = Number(score);
+
+        document.getElementById("a").innerHTML = b;
+
+        var r = Math.floor(Math.random() * (100-1)) + 1;
+
+        document.getElementById("b").innerHTML = r;
+
+        document.getElementById("c").innerHTML = (Math.abs(r - b));
+
+        document.getElementById("d").innerHTML = Math.round(Math.sqrt(b));
+
+        document.getElementById("e").innerHTML = Math.PI;
+        
+        var str = '50';
+        var n = str * 2;
+
+        document.getElementById("f").innerHTML = n;
+
+    </script>
+</body>
+</html>

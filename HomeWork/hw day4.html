@@ -3,36 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Maths</title>
 </head>
 <body>
-    <p id="a"></p>
-    <p id="b"></p>
-    <p id="c"></p>
-    <p id="d"></p>
-    <p id="e"></p>
-    <p id="f"></p>
     <script>
-        var score = "67";
-        var b = Number(score);
+        let m = Math.floor(Math.random() *(50 - 1) ) + 1;
+        console.log("Mystery Level:", m);
 
-        document.getElementById("a").innerHTML = b;
+        let u = "45";
+        let s = Number(u);
+        console.log("User Score:", s);
 
-        var r = Math.floor(Math.random() * (100-1)) + 1;
+        let diff = Math.abs(m - s);
+        console.log("Absolute Difference:", diff);
 
-        document.getElementById("b").innerHTML = r;
+        console.log("Square Root of Score:", Math.sqrt(s));
 
-        document.getElementById("c").innerHTML = (Math.abs(r - b));
+        console.log("PI:", Math.PI);
 
-        document.getElementById("d").innerHTML = Math.round(Math.sqrt(b));
+        console.log( "20" * 5);
 
-        document.getElementById("e").innerHTML = Math.PI;
-        
-        var str = '50';
-        var n = str * 2;
-
-        document.getElementById("f").innerHTML = n;
-
+        console.log("Max value:", Math.max(10, 20, m));
+        console.log("Min value:", Math.min(10, 20, m));
     </script>
 </body>
 </html>
