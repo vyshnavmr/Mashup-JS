@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="head"></h1>
+    <h1 id="sum"></h1>
+    <h1 id="diff"></h1>
+    <h1 id="pro"></h1>
+    <h1 id="div"></h1>
+    <script>
+        function Console(a,b){
+            console.log("Using console.log")
+            console.log(a + b)
+            console.log(a - b)
+            console.log(a * b)
+            console.log(a / b)
+        }
+        function inner(a,b){
+            document.getElementById("head").innerHTML = "Using innerHTML"
+            document.getElementById("sum").innerHTML  = "Sum is: " + (a + b)
+            document.getElementById("diff").innerHTML = "Difference is: " + (a - b)
+            document.getElementById("pro").innerHTML  = "Product is: " + (a * b)
+            document.getElementById("div").innerHTML  = "Quotient is: " + (a / b)
+        }
+        function docWrite(a,b){
+            document.write("Using document.write <br>")
+            document.write("Sum is: " + (a + b) + "<br>" )
+            document.write("Difference is: " + (a - b) + "<br>")
+            document.write("Product is: " + (a * b) + "<br>")
+            document.write("Quotient is: " + (a / b) + "<br>")
+        }
+        function winAlert(a,b){
+            window.alert("Sum is: " + (a + b))
+            window.alert("difference is: " + (a - b))
+            window.alert("Product is: " + (a * b))
+            window.alert("Quotient is: " + (a / b))
+        }
+        x = 5;
+        y = 10;
+
+        Console(x,y);
+        inner(x,y);
+        docWrite(x,y);
+        winAlert(x,y);
+    </script>
+</body>
+</html>

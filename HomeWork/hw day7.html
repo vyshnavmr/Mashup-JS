@@ -18,10 +18,8 @@
     function showDetails() {
         var dateInput = document.getElementById("eventDate").value;
 
-        // Convert input string to Date object
         var eventDate = new Date(dateInput);
 
-        // Extract year, month name, day
         var year = eventDate.getFullYear();
 
         var monthNames = [
@@ -32,11 +30,9 @@
 
         var day = eventDate.getDate();
 
-        // Calculate how many full years have passed
         var today = new Date();
         var yearsPassed = today.getFullYear() - year;
 
-        // Adjust if the month/day hasn't occurred yet this year
         if (
             today.getMonth() < eventDate.getMonth() ||
             (today.getMonth() === eventDate.getMonth() && today.getDate() < day)
@@ -44,14 +40,12 @@
             yearsPassed--;
         }
 
-        // Show details
         document.getElementById("details").innerHTML =
             "Selected Date: " + day + " " + monthName + ", " + year;
 
         document.getElementById("yearsPassed").innerHTML =
             "Full Years Passed: " + yearsPassed;
 
-        // Custom message
         var oneYearLater = new Date(eventDate);
         oneYearLater.setFullYear(eventDate.getFullYear() + 1);
 
