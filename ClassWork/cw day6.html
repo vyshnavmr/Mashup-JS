@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=+, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var items = ["apple", "banana", "grapes", "orange"];
+        var rate = [80, 30, 55, 25];
+
+        var mergedList = []
+
+        for(i=0; i< items.length; i++){
+            mergedList.push(`Product: ${items[i]} : Rate: ${rate[i]}`)
+        }
+        document.write(mergedList);
+
+        var over50 = rate.filter(myFunction);
+        document.write(over50)
+
+        function myFunction(value, index, array) 
+        {
+        return indexof(value > 50);
+        }
+    </script>
+</body>
+</html>
