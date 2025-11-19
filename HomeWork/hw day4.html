@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Result</title>
+</head>
+<body>
+    <script>
+        let mysteryLevel = Math.floor(Math.random() * 50) + 1;
+        console.log("Mystery Level:", mysteryLevel);
+
+        userInput = "45"
+        let userScore = Number(userInput);
+        console.log("User Score:", userScore);
+
+        let difference = Math.abs(mysteryLevel - userScore);
+        console.log("Absolute Difference:", difference);
+
+        let squareRoot = Math.sqrt(userScore);
+        console.log("Square Root of User Score:", squareRoot);
+
+        console.log("Value of Pi:", Math.PI);
+
+        let implicitMultiplication = "20" * 5; 
+        console.log('Result of "20" * 5:', implicitMultiplication);
+
+        console.log("Highest value:", Math.max(10, 20, mysteryLevel));
+        console.log("Lowest value:", Math.min(10, 20, mysteryLevel));
+    </script>
+</body>
+</html>
