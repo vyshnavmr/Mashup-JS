@@ -3,30 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Result</title>
+    <title>Document</title>
 </head>
 <body>
+    <p id="a"></p>
+    <p id="b"></p>
+    <p id="c"></p>
+    <p id="d"></p>
+    <p id="e"></p>
+    <p id="f"></p>
     <script>
-        let mysteryLevel = Math.floor(Math.random() * 50) + 1;
-        console.log("Mystery Level:", mysteryLevel);
+        var score = "67";
+        var b = Number(score);
 
-        userInput = "45"
-        let userScore = Number(userInput);
-        console.log("User Score:", userScore);
+        document.getElementById("a").innerHTML = b;
 
-        let difference = Math.abs(mysteryLevel - userScore);
-        console.log("Absolute Difference:", difference);
+        var r = Math.floor(Math.random() * (100-1)) + 1;
 
-        let squareRoot = Math.sqrt(userScore);
-        console.log("Square Root of User Score:", squareRoot);
+        document.getElementById("b").innerHTML = r;
 
-        console.log("Value of Pi:", Math.PI);
+        document.getElementById("c").innerHTML = (Math.abs(r - b));
 
-        let implicitMultiplication = "20" * 5; 
-        console.log('Result of "20" * 5:', implicitMultiplication);
+        document.getElementById("d").innerHTML = Math.round(Math.sqrt(b));
 
-        console.log("Highest value:", Math.max(10, 20, mysteryLevel));
-        console.log("Lowest value:", Math.min(10, 20, mysteryLevel));
+        document.getElementById("e").innerHTML = Math.PI;
+        
+        var str = '50';
+        var n = str * 2;
+
+        document.getElementById("f").innerHTML = n;
+
     </script>
 </body>
 </html>
