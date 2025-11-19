@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Birthday Tracker</title>
+</head>
+<body>
+
+<p id="result"></p>
+
+<script>
+    var friend = {
+        name: "John",
+        birthDate: "1999-07-05"
+    };
+
+    function getBirthdayDetails(f) {
+        var dateObj = new Date(f.birthDate);
+
+        var year = dateObj.getFullYear();
+
+        var monthNames = [
+            "January","February","March","April","May","June",
+            "July","August","September","October","November","December"
+        ];
+        var monthName = monthNames[dateObj.getMonth()];
+
+        var day = dateObj.getDate();
+
+        var today = new Date();
+        var age = today.getFullYear() - year;
+
+        var hasBirthdayPassed =
+            (today.getMonth() > dateObj.getMonth()) ||
+            (today.getMonth() === dateObj.getMonth() && today.getDate() >= day);
+
+        if (!hasBirthdayPassed) {
+            age = age - 1;
+        }
+
+        var text = f.name + " was born on " + day + " " + monthName + ", " + year +
+                   " and is " + age + " years old.";
+
+        document.getElementById("result").innerHTML = text;
+    }
+
+    getBirthdayDetails(friend);
+</script>
+
+</body>
+</html>
