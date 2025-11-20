@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var total = 0;
+        var purchases = 0;
+        do{
+            var ttotal = 0;
+            var code = parseInt(prompt("Enter product code:"));
+            var kg = parseInt(prompt("Enter weight in kg:"));
+
+            switch(code)
+            {
+                case 1:
+                    document.write("<br>" +`You selected Apples : ${kg}kg` + "<br>");
+                    ttotal += (kg * 30)
+                    total += ttotal; 
+                    document.write(`Amount is $${ttotal}` + "<br>")
+                    purchases++
+                    break;
+                case 2:
+                    document.write("<br>" +`You selected Banana : ${kg}kg` + "<br>");
+                    ttotal += (kg * 10)
+                    total += ttotal;
+                    document.write(`Amount is $${ttotal}` + "<br>" )
+                    purchases++
+                    break;
+                case 3:
+                    document.write("<br>" +`You selected Mango : ${kg}kg` + "<br>");
+                    ttotal += (kg * 50)
+                    total += ttotal;
+                    document.write(`Amount is $${ttotal}` + "<br>")
+                    purchases++
+                    break;
+                default:
+                    document.write("Invalid code selected" + "<br>")
+                    continue
+            }
+        }while(purchases < 5);
+        document.write("<br>" + `Your total bill amount is: $${total}` + "<br>")
+    </script>
+</body>
+</html>
