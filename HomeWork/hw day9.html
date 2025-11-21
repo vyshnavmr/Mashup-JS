@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function filterComment(comment) {
+
+        var bannedWords = /(bad|ugly|stupid)/gi;
+        var cleanedComment = comment.replace(bannedWords, "***");
+
+        var numberMatches = comment.match(/\d+/g);
+        var numberCount = numberMatches ? numberMatches.length : 0;
+
+        var capitalMatches = comment.match(/\b[A-Z][a-z]*/g);
+        var capitalCount = capitalMatches ? capitalMatches.length : 0;
+
+        return (
+            "Cleaned Comment: " + cleanedComment + "\n" +
+            "Numbers Count: " + numberCount + "\n" +
+            "Capitalized Words Count: " + capitalCount
+        );
+    }
+
+    var comment = "I think this movie was BAD and 100% Stupid! But the Acting was Amazing and 3 actors were great.";
+    console.log(filterComment(comment));
+</script>
+</body>
+</html>
