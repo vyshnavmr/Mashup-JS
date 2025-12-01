@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let comment = "My son is 12 years old. Our flat number is 45 and contact is 9876543210.";
+
+        let ans = /\d/.test(comment);
+        console.log(`Are there numbers in this comment: ${ans}`);
+
+        if (ans == true){
+            replace_str = /\d+/g
+            let comment2 = comment.replace(replace_str, "**NUMBER**");
+            console.log(comment2);
+        }
+        else{
+            console.log("There are no numbers in this comment!");
+        }
+        
+    </script>
+</body>
+</html>
