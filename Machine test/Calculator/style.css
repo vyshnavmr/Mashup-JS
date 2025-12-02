@@ -1,17 +1,17 @@
-body{
+/* body{
     font-family: sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: rgb(254, 255, 240);
-}
+} */
+ 
 .calculator{
     background-color: white;
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    text-align: center;
+    /* text-align: center; */
 }
 input, select{
     padding: 10px;
@@ -34,5 +34,4 @@ button:hover{
     margin-top: 20px;
     font-size: 24px;
     font-weight: bold;
-    color: #333;
 }

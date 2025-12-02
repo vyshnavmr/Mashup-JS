@@ -19,6 +19,7 @@ function selectWinner() {
     console.log("The winning number is: " + winner);
 
     pageDisplay.textContent = "Winner: " + winner;
+    document.getElementById("result-display").style.color = "red";
 
     modalDisplay.textContent = winner;
     winnerModal.show();
